@@ -52,8 +52,7 @@ MACROMETA_API_KEY="<YOUR API KEY HERE>" wrangler publish
 
 This will build your application using Webpack and publish it. If this is your first time publishing, it will create a new worker named `node-cloudflare-worker-template` under your account. If your worker is successfully published, the command will output a URL that looks like `https://node-cloudflare-worker-template.<your user name>.workers.dev` where your worker is available.
 
-Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable using the [Cloudflare Dashboard](https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard) and use:
-run:
+Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable using the [Cloudflare Dashboard](https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard) and run:
 
 ```bash
 wrangler publish
