@@ -38,6 +38,8 @@ You can use the `wrangler dev` command to run your Cloudflare Worker locally. Th
 
 Once up and running, you can visit `http://localhost:8787` in your browser, and the Cloudflare Worker will return a JSON response with 5 documents fetched from the `employees` collection.
 
+![Macrometa with Cloudflare Worker](https://i.imgur.com/ngyRSDf.png)
+
 > 💡 Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
 
 ## Publishing 🚀
