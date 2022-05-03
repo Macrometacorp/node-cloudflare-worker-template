@@ -2,7 +2,7 @@ const jsc8 = require("jsc8");
 
 const client = new jsc8({
   url: "https://gdn.paas.macrometa.io",
-  apiKey: MACROMETA_API_KEY,
+  apiKey: MACROMETA_API_KEY, // set environment variable in .env
   fabricName: "_system",
   agent: fetch // this tells the SDK to use the fetch which is native to the browser
 });

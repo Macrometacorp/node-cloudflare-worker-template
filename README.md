@@ -22,7 +22,7 @@ Further documentation for the Wrangler CLI can be found [here](https://developer
 
 ## Development 💾
 
-> To run your worker locally, please make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
+> 💡 To run your worker locally, please make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
 
 You can use the following Wrangler CLI command `wrangler dev` to run the worker locally, building and starting the worker on port `8787`.
 
