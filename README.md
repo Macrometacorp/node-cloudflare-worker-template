@@ -30,6 +30,8 @@ The example code in `src/index.js` shows how to fetch documents from a collectio
 
 To run your Cloudflare Worker locally, make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
 
+> 💡 If you need to add additional environment variables, you will need to update the `plugins` section of `webpack.config.js`.
+
 ### 3. Run the Worker 🚂
 
 You can use the command `wrangler dev` to run your worker locally. The command will run the build command and start the worker on port `8787`. You can then call the worker by visiting `http://localhost:8787`.
