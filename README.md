@@ -18,7 +18,7 @@ To generate a local copy of this template using [Wrangler](https://github.com/cl
 wrangler generate my-node-cloudflare-worker-template https://github.com/macrometacorp/node-cloudflare-worker-template
 ```
 
-> Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
+> 💡 Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
 
 ## Development 💾
 
@@ -30,13 +30,13 @@ The example code in `src/index.js` shows how to fetch documents from a collectio
 
 To run your Cloudflare Worker locally, make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
 
-> 💡 If you need to add additional environment variables, you will need to update the `plugins` section of `webpack.config.js`.
+> 💡 If your Worker requires additional environment variables, you can add them to the `plugins` section of `webpack.config.js`.
 
 ### 3. Run the Worker 🚂
 
 You can use the `wrangler dev` command to run your Cloudflare Worker locally. The command will run the build command and start on port `8787`.
 
-> Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
+> 💡 Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
 
 ## Publishing 🚀
 
