@@ -1,50 +1,43 @@
 # Macrometa JS SDK Cloudflare Worker Template
 
-This is a template for setting up a [Cloudflare Worker](https://workers.cloudflare.com/) which uses the [`jsC8`](https://www.npmjs.com/package/jsc8) Javascript SDK. 
+This is a template to help you get started using the [Macrometa JS SDK (jsC8)](https://www.npmjs.com/package/jsc8) with [Cloudflare Workers](https://workers.cloudflare.com/). The configuration within this template relies on a custom build using [webpack](https://webpack.js.org/) and an `agent` override when initializing the jsC8 client.
 
-> Note: The [`wrangler`](https://developers.cloudflare.com/workers/cli-wrangler) CLI tool is required for publishing.
+## Requirements 🥁
 
-## Generating
+1. A Macrometa API Key. If you already have a Macrometa account, you can generate an API key by visiting your dashboard and navigating to `Account` → `API Keys` → `New API Key`. If you don't have a Macrometa account, you can create a free developer account [here](https://auth.paas.macrometa.io/signup).
 
-To generate a local copy of the template using [Wrangler](https://github.com/cloudflare/wrangler).
+2. Node.js `v14.x.x` or above. We recommend installing Node with a version manager like [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) or [Volta](https://volta.sh/). 
+
+3. This template is dependent on the Cloudflare Wrangler CLI. You can install the Wrangler CLI with `npm i @cloudflare/wrangler -g`. For more information on installing Wrangler, please visit the [official docs](https://developers.cloudflare.com/workers/cli-wrangler/install-update/).
+
+## Installation ⚡
+
+To generate a local copy of this template using [Wrangler](https://github.com/cloudflare/wrangler):
 
 ```bash
-wrangler generate my-macrometa-cloudflare-worker
- https://github.com/macrometacorp/macrometa-node-cloudflare-worker-template
+$ wrangler generate my-node-cloudflare-worker-template https://github.com/macrometacorp/macrometa-node-cloudflare-worker-template
 ```
 
-Further documentation for Wrangler can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
+Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
 
-## Development
+## Development 💾
 
-You can use the following Wrangler CLI command `wrangler dev` to run the worker locally, which will build and start the worker on port `8787`.
+> To run your worker locally, please make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
 
-## Publishing
+You can use the following Wrangler CLI command `wrangler dev` to run the worker locally, building and starting the worker on port `8787`.
 
-You can build and publish your worker using:
+## Publishing 🚀
+
+You can build and publish your Cloudflare Worker using this command:
 
 ```bash
 MACROMETA_API_KEY="<YOUR API KEY HERE>" wrangler publish
 ```
 
-This will build your application using Webpack and publish it. If this is your first time publishing, it will create a new worker named `macrometa-node-cloudflare-worker-template` under your account. If all goes well, the command will output a URL that looks like `https://macrometa-node-cloudflare-worker-template.<your user name>.workers.dev` where your worker is available.
+This will build your application using Webpack and publish it. If this is your first time publishing, it will create a new worker named `node-cloudflare-worker-template` under your account. If all goes well, the command will output a URL that looks like `https://node-cloudflare-worker-template.<your user name>.workers.dev` where your worker is available.
 
-Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable and use:
-
-```bash
-wrangler publish
-```
-
-## Cloudflare Secrets
-
-Cloudflare Workers offer a [secrets infrastructure](https://developers.cloudflare.com/workers/platform/environment-variables#adding-secrets-via-wrangler) for storing an encrypted secret. You can use this instead of relying on an environment variable.
-
-1. Publish your worker at least once using the above instructions to bootstrap the worker.
-2. Remove the `DefinePlugin` from [`webpack.config.js`](webpack.config.js).
-3. Run `wrangler secret put MACROMETA_API_KEY`. This will prompt you to enter your secret (i.e., your Macrometa API key). 
-
-This only needs to be done the first time you configure your new worker. After that, it will persist across deployments. Once set up, you can publish using:
+Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable using the [Cloudflare Dashboard](https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard) and use:
 
 ```bash
-wrangler publish
+$ wrangler publish
 ```
