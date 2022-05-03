@@ -1,6 +1,6 @@
 # Macrometa JS SDK Cloudflare Worker Template
 
-This is a template to help you get started using the [Macrometa JS SDK (jsC8)](https://www.npmjs.com/package/jsc8) with [Cloudflare Workers](https://workers.cloudflare.com/). The configuration within this template relies on a custom build using [webpack](https://webpack.js.org/) and an `agent` override when initializing the jsC8 client.
+This is a template to help you get started using the [Macrometa JS SDK](https://www.npmjs.com/package/jsc8) with [Cloudflare Workers](https://workers.cloudflare.com/). The configuration within this template relies on a custom build using [webpack](https://webpack.js.org/) and an `agent` override when initializing the jsC8 client.
 
 ## Requirements 🥁
 
@@ -15,7 +15,7 @@ This is a template to help you get started using the [Macrometa JS SDK (jsC8)](h
 To generate a local copy of this template using [Wrangler](https://github.com/cloudflare/wrangler):
 
 ```bash
-$ wrangler generate my-node-cloudflare-worker-template https://github.com/macrometacorp/macrometa-node-cloudflare-worker-template
+$ wrangler generate my-node-cloudflare-worker-template https://github.com/macrometacorp/node-cloudflare-worker-template
 ```
 
 Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).

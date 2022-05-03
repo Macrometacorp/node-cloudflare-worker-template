@@ -5,7 +5,8 @@
   "description": "A template for using the Macrometa JS SDK in a Cloudflare Worker",
   "main": "dist/worker.js",
   "scripts": {
-    "build": "webpack --progress"
+    "build": "webpack --progress",
+    "dev": "wrangler dev"
   },
   "author": "{{ authors }}",
   "license": "MIT",
