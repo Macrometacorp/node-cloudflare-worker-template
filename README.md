@@ -36,6 +36,8 @@ To run your Cloudflare Worker locally, make sure you've set your Macrometa API K
 
 You can use the `wrangler dev` command to run your Cloudflare Worker locally. The command will run the build command and start on port `8787`.
 
+Once up and running, you can visit `http://localhost:8787` in your browser, and the Cloudflare Worker will return a JSON response with 5 documents fetched from the `employees` collection.
+
 > 💡 Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
 
 ## Publishing 🚀
