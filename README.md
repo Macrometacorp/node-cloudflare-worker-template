@@ -18,7 +18,7 @@ To generate a local copy of this template using [Wrangler](https://github.com/cl
 wrangler generate my-node-cloudflare-worker-template https://github.com/macrometacorp/node-cloudflare-worker-template
 ```
 
-Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
+> Further documentation for the Wrangler CLI can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
 
 ## Development 💾
 
@@ -34,7 +34,9 @@ To run your Cloudflare Worker locally, make sure you've set your Macrometa API K
 
 ### 3. Run the Worker 🚂
 
-You can use the command `wrangler dev` to run your worker locally. The command will run the build command and start the worker on port `8787`. You can then call the worker by visiting `http://localhost:8787`.
+You can use the `wrangler dev` command to run your Cloudflare Worker locally. The command will run the build command and start on port `8787`.
+
+> Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
 
 ## Publishing 🚀
 
