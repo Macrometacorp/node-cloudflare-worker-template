@@ -57,3 +57,5 @@ Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable us
 ```bash
 wrangler publish
 ```
+
+To learn more about what you can build on the Macrometa platform, visit our [docs](https://macrometa.com/docs).
