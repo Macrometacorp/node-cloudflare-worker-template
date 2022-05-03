@@ -1,6 +1,6 @@
 # Macrometa Node SDK Cloudflare Worker Template
 
-This is a template to help you get started using the [Macrometa NodeJS SDK](https://www.npmjs.com/package/jsc8) with [Cloudflare Workers](https://workers.cloudflare.com/). The configuration within this template relies on a custom build using [webpack](https://webpack.js.org/) and an `agent` override when initializing the jsC8 client.
+This is a template to help you get started using the [Macrometa NodeJS SDK](https://www.npmjs.com/package/jsc8) with [Cloudflare Workers](https://workers.cloudflare.com/). The configuration within this template relies on a custom build using [webpack](https://webpack.js.org/) and an `agent` override when initializing the [jsC8](https://github.com/macrometacorp/jsC8) client.
 
 ## Requirements 🥁
 
