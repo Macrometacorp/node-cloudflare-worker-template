@@ -20,7 +20,7 @@ async function handleRequest() {
         'Content-Type': 'application/json;charset=UTF-8',
       },
       status: 200,
-    })
+    });
   } catch(error) {
     console.error(error);
   }
