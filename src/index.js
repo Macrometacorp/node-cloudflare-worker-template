@@ -9,10 +9,8 @@ const client = new jsc8({
 
 async function handleRequest() {
   try {
-    const collection = "employees";
-
     const docs = await client.executeQuery(
-      `FOR doc IN ${collection} RETURN doc`
+      `FOR doc IN ${MACROMETA_COLLECTION} RETURN doc`
     );
   
     return new Response(JSON.stringify(docs), {

@@ -24,11 +24,11 @@ wrangler generate my-node-cloudflare-worker-template https://github.com/macromet
 
 ### 1. Load Sample Data ⚗️
 
-The example code in `src/index.js` shows how to fetch documents from a collection named `employees`. To get up and running quickly, you can run `npm run load-test-data` to create a new employees collection and populate it with sample data.
+The example code in `src/index.js` shows how to fetch documents from a collection named `locations`. To get up and running quickly, you can run `npm run load-mock-data` to create a new `locations` collection and populate it with mock data.
 
 ### 2. Set Environment Variables 🌵
 
-To run your Cloudflare Worker locally, make sure you've set your Macrometa API Key as an environment variable in the `.env` file located at the root of your project.
+To run your Cloudflare Worker locally, make sure you've set your Macrometa API Key and collection name environment variables in the `.env` file located at the root of your project.
 
 > 💡 If your Worker requires additional environment variables, you can add them to the `plugins` section of `webpack.config.js`.
 
@@ -36,9 +36,9 @@ To run your Cloudflare Worker locally, make sure you've set your Macrometa API K
 
 You can use the `wrangler dev` command to run your Cloudflare Worker locally. The command will run the build command and start on port `8787`.
 
-Once up and running, you can visit `http://localhost:8787` in your browser, and the Cloudflare Worker will return a JSON response with 5 documents fetched from the `employees` collection.
+Once up and running, you can visit `http://localhost:8787` in your browser, and the Cloudflare Worker will return a JSON response with documents fetched from the `locations` collection.
 
-![Macrometa with Cloudflare Worker](https://i.imgur.com/H6nzQD6.png)
+![Macrometa with Cloudflare Worker](https://i.imgur.com/FDBOsUV.png)
 
 > 💡 Further documentation for testing your Cloudflare Worker in a local environment can be found [here](https://developers.cloudflare.com/workers/cli-wrangler/commands/#dev).
 
@@ -47,12 +47,12 @@ Once up and running, you can visit `http://localhost:8787` in your browser, and 
 You can build and publish your Cloudflare Worker using this command:
 
 ```bash
-MACROMETA_API_KEY="<YOUR API KEY HERE>" wrangler publish
+MACROMETA_API_KEY="<YOUR API KEY HERE>" MACROMETA_COLLECTION="<YOUR COLLECTION NAME HERE>" wrangler publish
 ```
 
 This will build your application using Webpack and publish it. If this is your first time publishing, it will create a new worker named `node-cloudflare-worker-template` under your account. If your worker is successfully published, the command will output a URL that looks like `https://node-cloudflare-worker-template.<your user name>.workers.dev` where your worker is available.
 
-Alternatively, you can specify `MACROMETA_API_KEY` as an environment variable using the [Cloudflare Dashboard](https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard) and run:
+Alternatively, you can specify `MACROMETA_API_KEY` and `MACROMETA_COLLECTION` as an environment variable in the [Cloudflare Dashboard](https://developers.cloudflare.com/workers/platform/environment-variables/#environment-variables-via-the-dashboard) and run:
 
 ```bash
 wrangler publish

@@ -23,6 +23,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       MACROMETA_API_KEY: JSON.stringify(process.env.MACROMETA_API_KEY), // set environment variable in .env
+      MACROMETA_COLLECTION: JSON.stringify(process.env.MACROMETA_COLLECTION), // set environment variable in .env
     }),
   ]
 };

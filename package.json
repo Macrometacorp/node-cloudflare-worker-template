@@ -7,12 +7,12 @@
   "scripts": {
     "build": "webpack --progress",
     "dev": "wrangler dev",
-    "load-test-data": "node load-test-data.js"
+    "load-mock-data": "node ./mock/load.js"
   },
   "author": "{{ authors }}",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "jsc8": "^0.16.3",
     "path-browserify": "^1.0.1",
     "url": "^0.11.0"
