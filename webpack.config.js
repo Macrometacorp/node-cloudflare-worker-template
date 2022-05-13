@@ -11,9 +11,6 @@ module.exports = {
     filename: "worker.js"
   },
   resolve: {
-    alias: {
-      request$: "xhr"
-    },
     fallback: { 
       // browser/worker polyfills required to replace Node libraries used by the jsC8 SDK
       "url": require.resolve("url"),
