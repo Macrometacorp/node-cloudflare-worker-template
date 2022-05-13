@@ -9,3 +9,4 @@ worker/
 node_modules/
 .cargo-ok
 .env
+.DS_Store
